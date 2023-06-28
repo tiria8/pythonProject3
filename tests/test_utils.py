@@ -1,9 +1,9 @@
-from tests.conftest import test_data
 from utils.utils import get_data, get_filtered_data, get_last_transactions, encrypted_transaction, formatted_data
 
+filename = '../operations.json'
 
 def test_get_data():
-    data = get_data()
+    data = get_data(filename)
     assert isinstance(data, list)
 
 def test_filtered_data(test_data):

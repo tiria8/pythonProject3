@@ -1,12 +1,14 @@
 from datetime import datetime
 import json
-def get_data():
+
+filename = '../operations.json'
+def get_data(filename):
     """
     Получаем список транзакций
     :param file: JSON файл со списком операций, совершенных клиентом банка
     :return: список транзакций
     """
-    with open("operations.json", "r", encoding='utf-8') as file:
+    with open(filename, "r", encoding='utf-8') as file:
         data = json.load(file)
 
     return data
